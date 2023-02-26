@@ -14,8 +14,6 @@ public class Menu {
 
 	public void menuCadastro() {
 
-		Pessoa pessoa = new Pessoa();
-
 		do {
 			System.out.println("--------------------CADASTRO MULHER--------------------");
 			System.out.println("(1) Adicionar mulher...................................");
@@ -39,19 +37,18 @@ public class Menu {
 				break;
 
 			case 1:
+				
 				System.out.print("Informe o nome: ");
 				String nome = scan.next();
-				pessoa.setNome(nome);
 				System.out.print("Informe o CPF: ");
 				String cpf = scan.next();
-				pessoa.setCpf(cpf);
 				System.out.print("Informe a idade: ");
 				int idade = scan.nextInt();
-				pessoa.setIdade(idade);
 				System.out.print("Informe o endereço: ");
 				String endereco = scan.next();
-				pessoa.setEndereco(endereco);
-				pessoaController.cadastrar(pessoa);
+				int numeroDaPessoa = pessoaController.gerarNumero();
+				Pessoa novaPessoa = new Pessoa(numeroDaPessoa, cpf, nome, idade, endereco);
+				pessoaController.cadastrar(novaPessoa);
 				break;
 
 			case 2:
