@@ -13,7 +13,7 @@ import model.ViolenciaPsicologica;
 import model.ViolenciaSexual;
 import model.ViolenciaTrans;
 
-public class Menu {
+public class Menu  {
 
 	private int opcao;
 	PessoaController pessoaController = new PessoaController();
@@ -23,8 +23,9 @@ public class Menu {
 
 		int idade = 0;
 		String nome, cpf, endereco;
+		
 
-		do {
+		while(opcao != 9) {
 			System.out.println("\n\n--------------------CADASTRO MULHER--------------------");
 			System.out.println("(1) Adicionar mulher...................................");
 			System.out.println("(2) listar todas as mulheres...........................");
@@ -34,10 +35,12 @@ public class Menu {
 			System.out.println("\nPor favor, digite sua opção: ");
 			try {
 				opcao = scan.nextInt();
+				scan.nextLine();
 
 			} catch (InputMismatchException ex) {
 				System.out.print("Digite valores inteiros: ");
-				scan.next();
+				scan.nextInt();
+				scan.nextLine();
 				opcao = 0;
 			}
 
@@ -52,20 +55,24 @@ public class Menu {
 				nome = scan.next();
 				System.out.print("Informe o CPF: ");
 				cpf = scan.nextLine();
+				
 				scan.nextLine();
 				System.out.print("Informe a idade: ");
 
 				try {
 					idade = scan.nextInt();
+					scan.nextLine();
 				} catch (InputMismatchException ex) {
 					System.err.println("Idade inválida!");
 					scan.nextLine();
 					System.out.print("Informe a idade novamente: ");
 					idade = scan.nextInt();
+					scan.nextLine();
 				}
 
 				System.out.print("Informe o endereço: ");
 				endereco = scan.nextLine();
+				
 				scan.nextLine();
 				int numeroDaPessoa = pessoaController.gerarNumero();
 				Pessoa novaPessoa = new Pessoa(numeroDaPessoa, cpf, nome, idade, endereco);
@@ -74,6 +81,10 @@ public class Menu {
 				break;
 
 			case 2:
+				
+				if(pessoaController.buscarNaCollection(0) == null) {
+					System.out.println("\nLista Vazia!");
+				}
 				pessoaController.listarTodasMulheres();
 				break;
 
@@ -87,7 +98,7 @@ public class Menu {
 				break;
 			}
 
-		} while (opcao != 9);
+		} 
 
 	}
 
@@ -139,12 +150,12 @@ public class Menu {
 				break;
 			case 9:
 				System.out.println("\nVocê selecionou sair!\nObrigade por acessar nosso sistema!");
-				menu = false;
+				System.exit(0);
 				break;
 			default:
 				System.err.println("Opção Inválida!");
 			}
-		} while (menu);
+		} while(menu);
 		do {
 			System.out.println("\n\n-------- VOCÊ É UMA MULHER TRANS? --------");
 			System.out.println("(1) SIM.......................................");
