@@ -7,7 +7,7 @@ public class Pessoa {
 	private String nome;
 	private int idade;
 	private String endereco;
-
+	ViolenciaDomestica violencia = new ViolenciaDomestica();
 
 	public Pessoa(int numero, String cpf, String nome, int idade, String endereco) {
 		this.numero = numero;
@@ -15,6 +15,10 @@ public class Pessoa {
 		this.nome = nome;
 		this.idade = idade;
 		this.endereco = endereco;
+	}
+
+	public Pessoa(int numero) {
+		this.numero = numero;
 	}
 
 	public String getNome() {
@@ -67,6 +71,5 @@ public class Pessoa {
 		System.out.println("Idade: " + getIdade());
 		System.out.println("Endereço: " + getEndereco());
 		System.out.println("***********************************************************\n");
-
 	}
 }
