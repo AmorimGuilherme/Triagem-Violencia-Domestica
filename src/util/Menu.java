@@ -44,8 +44,10 @@ public class Menu {
 				System.out.print("Informe o nome: ");
 				nome = scan.next();
 				System.out.print("Informe o CPF: ");
-				cpf = scan.next();
+				cpf = scan.nextLine();
+				scan.nextLine();
 				System.out.print("Informe a idade: ");
+
 				try {
 					idade = scan.nextInt();
 				} catch (InputMismatchException ex) {
@@ -54,8 +56,10 @@ public class Menu {
 					System.out.print("Informe a idade novamente: ");
 					idade = scan.nextInt();
 				}
+
 				System.out.print("Informe o endereço: ");
-				endereco = scan.next();
+				endereco = scan.nextLine();
+				scan.nextLine();
 				int numeroDaPessoa = pessoaController.gerarNumero();
 				Pessoa novaPessoa = new Pessoa(numeroDaPessoa, cpf, nome, idade, endereco);
 				pessoaController.cadastrar(novaPessoa);
