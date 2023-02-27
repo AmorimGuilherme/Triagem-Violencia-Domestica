@@ -8,8 +8,6 @@ public class PrincipalAppAcolhimento {
 
 		Menu menu = new Menu();
 
-		// menu.menuInicial();
-
 		menu.menuCadastro();
 
 	}

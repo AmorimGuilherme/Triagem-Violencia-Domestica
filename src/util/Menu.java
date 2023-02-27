@@ -14,8 +14,11 @@ public class Menu {
 
 	public void menuCadastro() {
 
+		int idade = 0;
+		String nome, cpf, endereco;
+
 		do {
-			System.out.println("--------------------CADASTRO MULHER--------------------");
+			System.out.println("\n\n--------------------CADASTRO MULHER--------------------");
 			System.out.println("(1) Adicionar mulher...................................");
 			System.out.println("(2) listar todas as mulheres...........................");
 			System.out.println("(3) retirar mulher do atendimento......................");
@@ -37,15 +40,22 @@ public class Menu {
 				break;
 
 			case 1:
-				
+
 				System.out.print("Informe o nome: ");
-				String nome = scan.next();
+				nome = scan.next();
 				System.out.print("Informe o CPF: ");
-				String cpf = scan.next();
+				cpf = scan.next();
 				System.out.print("Informe a idade: ");
-				int idade = scan.nextInt();
+				try {
+					idade = scan.nextInt();
+				} catch (InputMismatchException ex) {
+					System.err.println("Idade inválida!");
+					scan.nextLine();
+					System.out.print("Informe a idade novamente: ");
+					idade = scan.nextInt();
+				}
 				System.out.print("Informe o endereço: ");
-				String endereco = scan.next();
+				endereco = scan.next();
 				int numeroDaPessoa = pessoaController.gerarNumero();
 				Pessoa novaPessoa = new Pessoa(numeroDaPessoa, cpf, nome, idade, endereco);
 				pessoaController.cadastrar(novaPessoa);
@@ -60,7 +70,9 @@ public class Menu {
 				int idCadastro = scan.nextInt();
 				pessoaController.deletar(idCadastro);
 				break;
-
+			default:
+				System.err.println("Opção Inválida!");
+				break;
 			}
 
 		} while (opcao != 9);
