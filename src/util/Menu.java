@@ -47,12 +47,14 @@ public class Menu  {
 			switch (opcao) {
 			case 9:
 				System.out.println("\nMenu Cadastro Finalizado!");
+				System.exit(0);
 				break;
 
 			case 1:
 
 				System.out.print("Informe o nome: ");
-				nome = scan.next();
+				nome = scan.nextLine();
+				scan.nextLine();
 				System.out.print("Informe o CPF: ");
 				cpf = scan.nextLine();
 				
