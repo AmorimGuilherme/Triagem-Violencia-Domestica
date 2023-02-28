@@ -85,9 +85,10 @@ public class Menu {
 
 			case 2:
 
-				if (pessoaController.buscarNaCollection(0) == null) {
+				if (pessoaController.buscarNaCollection(1) == null) {
 					System.out.println("\nLista Vazia!");
 				}
+				
 				pessoaController.listarTodasMulheres();
 				break;
 
