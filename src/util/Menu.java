@@ -28,8 +28,8 @@ public class Menu {
 		while (menu) {
 			System.out.println("\n\n--------------------CADASTRO MULHER--------------------");
 			System.out.println("(1) Adicionar mulher...................................");
-			System.out.println("(2) listar todas as mulheres...........................");
-			System.out.println("(3) retirar mulher do atendimento......................");
+			System.out.println("(2) Listar todas as mulheres...........................");
+			System.out.println("(3) Retirar mulher do atendimento......................");
 			System.out.println("(9) Sair...............................................");
 			System.out.println("-------------------------------------------------------");
 			System.out.println("\nPor favor, digite sua opção: ");
@@ -55,11 +55,11 @@ public class Menu {
 				System.out.print("Informe o nome: ");
 				nome = scan.nextLine();
 				scan.nextLine();
-				
+
 				System.out.print("Informe o CPF: ");
 				cpf = scan.nextLine();
 				scan.nextLine();
-				
+
 				System.out.print("Informe a idade: ");
 
 				try {
@@ -67,16 +67,16 @@ public class Menu {
 					scan.nextLine();
 				} catch (InputMismatchException ex) {
 					System.err.println("Idade inválida!");
-					
+
 					System.out.print("Informe a idade novamente: ");
 					idade = scan.nextInt();
 					scan.nextLine();
 				}
 
-				System.out.print("Informe o endereço: ");
+				System.out.print("\nInforme o endereço: ");
 				endereco = scan.nextLine();
 				scan.nextLine();
-				
+
 				int numeroDaPessoa = pessoaController.gerarNumero();
 				Pessoa novaPessoa = new Pessoa(numeroDaPessoa, cpf, nome, idade, endereco);
 				pessoaController.cadastrar(novaPessoa);
@@ -88,7 +88,7 @@ public class Menu {
 				if (pessoaController.buscarNaCollection(1) == null) {
 					System.out.println("\nLista Vazia!");
 				}
-				
+
 				pessoaController.listarTodasMulheres();
 				break;
 
@@ -111,14 +111,14 @@ public class Menu {
 		boolean menu = true;
 
 		do {
-			System.out.println("\n\n---------TIPO DE VIOLÊNCIA DOMÉSTICA----------");
-			System.out.println("(1) VIOLÊNCIA PSICOLÓGICA.........................");
-			System.out.println("(2) VIOLÊNCIA FÍSICA..............................");
-			System.out.println("(3) VIOLÊNCIA SEXUAL..............................");
-			System.out.println("(4) VIOLÊNCIAL PATRIMONIAL........................");
-			System.out.println("(5) VIOLÊNCIAL MORAL..............................");
-			System.out.println("(9) SAIR..........................................");
-			System.out.println("--------------------------------------------------");
+			System.out.println("\n\n-------------------TIPO DE VIOLÊNCIA-------------------");
+			System.out.println("(1) VIOLÊNCIA PSICOLÓGICA..............................");
+			System.out.println("(2) VIOLÊNCIA FÍSICA...................................");
+			System.out.println("(3) VIOLÊNCIA SEXUAL...................................");
+			System.out.println("(4) VIOLÊNCIAL PATRIMONIAL.............................");
+			System.out.println("(5) VIOLÊNCIAL MORAL...................................");
+			System.out.println("(9) SAIR...............................................");
+			System.out.println("-------------------------------------------------------");
 			System.out.println("\nPor favor, digite sua opção: ");
 			try {
 				opcao = scan.nextInt();
@@ -159,10 +159,11 @@ public class Menu {
 			}
 		} while (menu);
 		do {
-			System.out.println("\n\n-------- VOCÊ É UMA MULHER TRANS? --------");
-			System.out.println("(1) SIM.......................................");
-			System.out.println("(2) NÃO.......................................");
-			System.out.println("----------------------------------------------");
+
+			System.out.println("\n\n-------------- VOCÊ É UMA MULHER TRANS? ---------------");
+			System.out.println("(1) SIM................................................");
+			System.out.println("(2) NÃO................................................");
+			System.out.println("-------------------------------------------------------");
 			System.out.println("\nPor favor, digite sua opção: ");
 
 			try {
@@ -182,7 +183,7 @@ public class Menu {
 				menu = false;
 				break;
 			case 2:
-				System.out.println("Você escolheu \"NÃO" + "!");
+				System.out.println("Você escolheu NÃO!");
 				menu = false;
 				break;
 			default:
@@ -192,10 +193,10 @@ public class Menu {
 		} while (menu);
 		do {
 
-			System.out.println("\n\n-------- VOCÊ É FINANCEIRAMENTE DEPENDENTE? --------");
-			System.out.println("(1) SIM.......................................");
-			System.out.println("(2) NÃO.......................................");
-			System.out.println("----------------------------------------------");
+			System.out.println("\n\n---------- VOCÊ É FINANCEIRAMENTE DEPENDENTE? ----------");
+			System.out.println("(1) SIM.................................................");
+			System.out.println("(2) NÃO.................................................");
+			System.out.println("--------------------------------------------------------");
 			System.out.println("\nPor favor, digite sua opção: ");
 
 			try {

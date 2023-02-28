@@ -55,13 +55,13 @@ public class ViolenciaTrans extends ViolenciaDomestica {
         int indiceData = rand.nextInt(datas.size()); 
         String data = datas.get(indiceData);
 		
-		System.out.println("\n------------------------------------------------------------------");
-		System.out.println("--------AGENDAMENTO PARA GRUPO DE APOIO À MULHERES TRANS-----------\n");
-		System.out.println("Data: "+data);
-		System.out.println("Hora: "+hora);
-		System.out.println("Local: "+local);
-		System.out.println("Documentos Necessários (RG, CPF e COMPROVANTE DE ENDEREÇO)");
-		System.out.println("\n----------------------------------------------------------------\n");
+		System.out.println("------------------------------------------------------------------");
+		System.out.println("|--------AGENDAMENTO PARA GRUPO DE APOIO À MULHERES TRANS--------|");
+		System.out.println("|Data: "+data);
+		System.out.println("|Hora: "+hora);
+		System.out.println("|Local: "+local);
+		System.out.println("|Documentos Necessários (RG, CPF e COMPROVANTE DE ENDEREÇO)");
+		System.out.println("------------------------------------------------------------------\n");
 	}
 
 }

@@ -56,12 +56,12 @@ Random rand = new Random(); //Cria um objeto para gerar valores aleatórios
         String data = datas.get(indiceData);
 		
 		super.emitirGuia();
-		System.out.println("\n---------AGENDAMENTO PARA REALIZAÇÃO DE CORPO DE DELITO------\n");
-		System.out.println("Data: "+data);
-		System.out.println("Hora: "+hora);
-		System.out.println("Local: "+local);
-		System.out.println("Documentos Necessários (RG, CPF e COMPROVANTE DE ENDEREÇO)");
-		System.out.println("\n--------------------------------------------------------------\n");
+		System.out.println("---------AGENDAMENTO PARA REALIZAÇÃO DE CORPO DE DELITO------");
+		System.out.println("|Data: "+data);
+		System.out.println("|Hora: "+hora);
+		System.out.println("|Local: "+local);
+		System.out.println("|Documentos Necessários (RG, CPF e COMPROVANTE DE ENDEREÇO)");
+		System.out.println("-------------------------------------------------------------\n");
 	}
 
 }
