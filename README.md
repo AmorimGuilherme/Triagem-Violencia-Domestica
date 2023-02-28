@@ -2,7 +2,7 @@
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
-O 18Zero-Violência é uma aplicação em Java construída como um protótipo que simula a criação de um chatbox para facilitação do atendimento da mulher vítima de violência doméstica.
+O 18Zero-Violência é uma aplicação em Java construída como um protótipo que simula a criação de um chatbot para facilitação do atendimento da mulher vítima de violência doméstica.
 
 
 ## Modelo conceitual
