@@ -10,17 +10,17 @@ Facilitar os serviços de apoio e suporte à mulher vítima de violência domés
 
 
 ## Equipe 👨‍💻
-GitHub: Alex
+[GitHub:](https://github.com/alexsayys) Alex Santos
  <br>
-GitHub: Flávia
+[GitHub:](https://github.com/Flahaga) Flávia Almeida
  <br>
-GitHub: Guilherme A.
+[GitHub:](https://github.com/AmorimGuilherme) Guilherme Amorim
  <br>
-GitHub: Mariana Paz
+[GitHub:](https://github.com/MarianaPaz1) Mariana Paz
  <br>
-GitHub: Samuel
+[GitHub:](https://github.com/Samuel-prata) Samuel Silvério
  <br>
-GitHub: Taymara
+[GitHub:](https://github.com/TayTeixeira) Taymara Teixeira
 
 
 ## 🔨Tecnologias utilizadas
