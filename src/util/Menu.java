@@ -227,11 +227,11 @@ public class Menu {
 
 		do {
 
-			System.out.println("\n\n--------ATENDIMENTO FINALIZADO--------");
-			System.out.println("(1) VISUALIZAR GUIA.......................");
-			System.out.println("(2) RETORNAR AO MENU DE CADASTRO GUIA.....");
-			System.out.println("(9) SAIR..................................");
-			System.out.println("------------------------------------------");
+			System.out.println("\n\n-------------- ATENDIMENTO FINALIZADO --------------");
+			System.out.println("(1) VISUALIZAR GUIA..................................");
+			System.out.println("(2) RETORNAR AO MENU DE CADASTRO.....................");
+			System.out.println("(9) SAIR.............................................");
+			System.out.println("-----------------------------------------------------");
 
 			System.out.println("\nPor favor, digite sua opção: ");
 			try {
