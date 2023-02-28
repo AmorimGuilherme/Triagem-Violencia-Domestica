@@ -32,15 +32,14 @@ public class Menu {
 			System.out.println("(3) Retirar mulher do atendimento......................");
 			System.out.println("(9) Sair...............................................");
 			System.out.println("-------------------------------------------------------");
-			System.out.println("\nPor favor, digite sua opção: ");
+			System.out.print("\nPor favor, digite sua opção: ");
+			
 			try {
 				opcao = scan.nextInt();
-				scan.nextLine();
 
 			} catch (InputMismatchException ex) {
 				System.out.print("Digite valores inteiros: ");
-				scan.nextInt();
-				scan.nextLine();
+				scan.next();
 				opcao = 0;
 			}
 
@@ -53,11 +52,11 @@ public class Menu {
 			case 1:
 
 				System.out.print("Informe o nome: ");
-				nome = scan.nextLine();
+				nome = scan.next();
 				scan.nextLine();
 
 				System.out.print("Informe o CPF: ");
-				cpf = scan.nextLine();
+				cpf = scan.next();
 				scan.nextLine();
 
 				System.out.print("Informe a idade: ");
@@ -73,8 +72,8 @@ public class Menu {
 					scan.nextLine();
 				}
 
-				System.out.print("\nInforme o endereço: ");
-				endereco = scan.nextLine();
+				System.out.print("Informe o endereço: ");
+				endereco = scan.next();
 				scan.nextLine();
 
 				int numeroDaPessoa = pessoaController.gerarNumero();
