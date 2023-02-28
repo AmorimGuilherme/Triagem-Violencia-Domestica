@@ -46,7 +46,8 @@ public class Menu {
 
 			switch (opcao) {
 			case 9:
-				System.out.println("\nMenu Cadastro Finalizado!");
+				System.out.println("\nOperação Encerrada!");
+				System.exit(0);
 				break;
 
 			case 1:
@@ -54,10 +55,11 @@ public class Menu {
 				System.out.print("Informe o nome: ");
 				nome = scan.nextLine();
 				scan.nextLine();
+				
 				System.out.print("Informe o CPF: ");
 				cpf = scan.nextLine();
-
 				scan.nextLine();
+				
 				System.out.print("Informe a idade: ");
 
 				try {
@@ -65,7 +67,7 @@ public class Menu {
 					scan.nextLine();
 				} catch (InputMismatchException ex) {
 					System.err.println("Idade inválida!");
-					scan.nextLine();
+					
 					System.out.print("Informe a idade novamente: ");
 					idade = scan.nextInt();
 					scan.nextLine();
@@ -73,8 +75,8 @@ public class Menu {
 
 				System.out.print("Informe o endereço: ");
 				endereco = scan.nextLine();
-
 				scan.nextLine();
+				
 				int numeroDaPessoa = pessoaController.gerarNumero();
 				Pessoa novaPessoa = new Pessoa(numeroDaPessoa, cpf, nome, idade, endereco);
 				pessoaController.cadastrar(novaPessoa);
